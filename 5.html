@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styled Page with Buttons</title>
+    <link rel="stylesheet" href="styles2.css">
+    <script src="buttons.js"></script>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            min-height: 100vh;
+            padding: 20px;
+            box-sizing: border-box;
+            background-color: #f0f0f0;
+        }
+
+        .styled-text-1 {
+            margin-bottom: 20px;
+            font-size: 2.5em;
+            color: yellow;
+            text-align: center;
+        }
+
+        .button-container {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            margin-top: auto;
+        }
+
+        .styled-button {
+            background-color: #2ecc71;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1em;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .styled-button:hover {
+            background-color: #27ae60;
+        }
+
+        @media (max-width: 768px) {
+            .styled-text-1 {
+                font-size: 1.2em;
+            }
+
+            .styled-button {
+                padding: 10px 20px;
+                font-size: 0.9em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="styled-text-1">
+        Uff thak gya but letter ni add horha yahan ab msg pe milaiga aur 2bj gye me sonay jarha baaki kaam subha !!
+    </div>
+    <div class="button-container">
+        <button class="styled-button" onclick="redirectToPage4()">Okay Sorry and Thank you</button>
+    </div>
+
+</body>
+</html>

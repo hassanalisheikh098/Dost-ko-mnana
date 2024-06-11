@@ -1,0 +1,94 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    padding: 0;
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('her.jpg') repeat center center;
+    background-size: contain;
+    filter: blur(8px);
+    z-index: -1;
+}
+
+.content {
+    background: rgba(255, 255, 255, 0.8); /* Add a slight background to make text more readable */
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    z-index: 1; /* Ensure it's above the blurred background */
+    position: relative;
+}
+
+.styled-text-1, .styled-text-2 {
+    position: relative;
+    z-index: 1;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; /* Black stroke */
+}
+
+.styled-text-1 {
+    color: #3498db;
+    font-size: 34px;
+    margin: 20px 0;
+    font-weight: bold;
+}
+
+.styled-text-2 {
+    color: #e74c3c;
+    font-size: 34px;
+    margin: 20px 0;
+    font-style: italic;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.styled-button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.styled-button:hover {
+    background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+    .styled-text-1 {
+        font-size: 1.2em;
+    }
+
+    .styled-text-2 {
+        font-size: 1em;
+    }
+
+    .styled-button {
+        padding: 10px 20px;
+        font-size: 0.9em;
+    }
+}
